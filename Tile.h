@@ -6,9 +6,9 @@ using namespace sf;
 
 class Tile
 {
-    bool debug = false;
     bool isBomb = false;
     bool isFlagged = false;
+    bool debug = false;
     int adjacentBombs = 0;
     vector<Tile*> neighbors;
 
@@ -21,24 +21,22 @@ public:
     Tile(Texture& texture, Texture& flagTexture);
 
     // Accessors
-    Sprite* getSprite1();
+    Sprite* getSprite();
     Sprite* getSprite2();
     Sprite* getFlagSprite();
     bool getIsBomb();
-    bool getIsDebug();
     bool getIsFlagged();
+    bool getIsDebug();
     int getAdjacentBombs();
     vector<Tile*>* getNeighbors();
 
     // Mutators
-    void setNeighbors(vector<Tile*> &neighborTiles);
     void setIsBomb(bool change);
-    void setIsDebug(bool change);
     void setIsFlagged(bool change);
+    void setIsDebug(bool change);
+    void setNeighbors(vector<Tile*> &neighborTiles);
 
     // Functions
     void move(float x, float y);
     void makeBomb();
-};
-
 };

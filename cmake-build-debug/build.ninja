@@ -49,9 +49,25 @@ cmake_ninja_workdir = C$:/Users/bluea/OneDrive/Documents/GitHub/Minesweeper/cmak
 
 build cmake_object_order_depends_target_Minesweeper: phony || CMakeFiles/Minesweeper.dir
 
+build CMakeFiles/Minesweeper.dir/main.cpp.obj: CXX_COMPILER__Minesweeper_Debug C$:/Users/bluea/OneDrive/Documents/GitHub/Minesweeper/main.cpp || cmake_object_order_depends_target_Minesweeper
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\Minesweeper.dir\main.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -Ic:/SFML/include -isystem C:/SFML/include
+  OBJECT_DIR = CMakeFiles\Minesweeper.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minesweeper.dir
+
 build CMakeFiles/Minesweeper.dir/Tile.cpp.obj: CXX_COMPILER__Minesweeper_Debug C$:/Users/bluea/OneDrive/Documents/GitHub/Minesweeper/Tile.cpp || cmake_object_order_depends_target_Minesweeper
   DEFINES = -DSFML_STATIC
   DEP_FILE = CMakeFiles\Minesweeper.dir\Tile.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  INCLUDES = -Ic:/SFML/include -isystem C:/SFML/include
+  OBJECT_DIR = CMakeFiles\Minesweeper.dir
+  OBJECT_FILE_DIR = CMakeFiles\Minesweeper.dir
+
+build CMakeFiles/Minesweeper.dir/Board.cpp.obj: CXX_COMPILER__Minesweeper_Debug C$:/Users/bluea/OneDrive/Documents/GitHub/Minesweeper/Board.cpp || cmake_object_order_depends_target_Minesweeper
+  DEFINES = -DSFML_STATIC
+  DEP_FILE = CMakeFiles\Minesweeper.dir\Board.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   INCLUDES = -Ic:/SFML/include -isystem C:/SFML/include
   OBJECT_DIR = CMakeFiles\Minesweeper.dir
@@ -65,7 +81,7 @@ build CMakeFiles/Minesweeper.dir/Tile.cpp.obj: CXX_COMPILER__Minesweeper_Debug C
 #############################################
 # Link the executable Minesweeper.exe
 
-build Minesweeper.exe: CXX_EXECUTABLE_LINKER__Minesweeper_Debug CMakeFiles/Minesweeper.dir/Tile.cpp.obj | C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libsfml-graphics-s-d.a C$:/SFML/lib/libsfml-audio-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libfreetype.a C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libopenal32.a C$:/SFML/lib/libvorbisfile.a C$:/SFML/lib/libvorbisenc.a C$:/SFML/lib/libvorbis.a C$:/SFML/lib/libogg.a C$:/SFML/lib/libFLAC.a
+build Minesweeper.exe: CXX_EXECUTABLE_LINKER__Minesweeper_Debug CMakeFiles/Minesweeper.dir/main.cpp.obj CMakeFiles/Minesweeper.dir/Tile.cpp.obj CMakeFiles/Minesweeper.dir/Board.cpp.obj | C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libsfml-graphics-s-d.a C$:/SFML/lib/libsfml-audio-s-d.a C$:/SFML/lib/libsfml-window-s-d.a C$:/SFML/lib/libfreetype.a C$:/SFML/lib/libsfml-system-s-d.a C$:/SFML/lib/libopenal32.a C$:/SFML/lib/libvorbisfile.a C$:/SFML/lib/libvorbisenc.a C$:/SFML/lib/libvorbis.a C$:/SFML/lib/libogg.a C$:/SFML/lib/libFLAC.a
   FLAGS = -g
   LINK_LIBRARIES = C:/SFML/lib/libsfml-system-s-d.a  C:/SFML/lib/libsfml-window-s-d.a  C:/SFML/lib/libsfml-graphics-s-d.a  C:/SFML/lib/libsfml-audio-s-d.a  C:/SFML/lib/libsfml-window-s-d.a  -lOpenGL32  -lgdi32  C:/SFML/lib/libfreetype.a  C:/SFML/lib/libsfml-system-s-d.a  -lwinmm  C:/SFML/lib/libopenal32.a  C:/SFML/lib/libvorbisfile.a  C:/SFML/lib/libvorbisenc.a  C:/SFML/lib/libvorbis.a  C:/SFML/lib/libogg.a  C:/SFML/lib/libFLAC.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Minesweeper.dir

@@ -9,7 +9,7 @@ Tile::Tile(sf::Texture &texture, sf::Texture &flagTexture) {
 }
 
 // Accessors
-Sprite* Tile::getSprite1() {
+Sprite* Tile::getSprite() {
     return sprite1;
 }
 
@@ -25,12 +25,12 @@ bool Tile::getIsBomb() {
     return isBomb;
 }
 
-bool Tile::getIsDebug() {
-    return debug;
-}
-
 bool Tile::getIsFlagged() {
     return isFlagged;
+}
+
+bool Tile::getIsDebug() {
+    return debug;
 }
 
 int Tile::getAdjacentBombs() {
@@ -58,12 +58,12 @@ void Tile::setIsBomb(bool change) {
     isBomb = change;
 }
 
-void Tile::setIsDebug(bool change) {
-    debug = change;
-}
-
 void Tile::setIsFlagged(bool change) {
     isFlagged = change;
+}
+
+void Tile::setIsDebug(bool change) {
+    debug = change;
 }
 
 // Functions
