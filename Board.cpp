@@ -9,6 +9,7 @@ using namespace sf;
 // Constructor
 Board::Board() {
 
+    // import...
     if (!digits.loadFromFile("../images/digits.png"))
         cout << "Error" << endl;
     else if (!debug.loadFromFile("../images/debug.png"))
@@ -74,8 +75,8 @@ Board::Board() {
 
 // Destructor
 Board::~Board() {
-    for (int i = 0; i < 16; i++) { // Might Change
-        for (int j = 0; j < 25; j++) { // Might change
+    for (int i = 0; i < 16; i++) {
+        for (int j = 0; j < 25; j++) {
             delete tiles[i][j];
         }
     }
@@ -167,10 +168,9 @@ void Board::setSprite(sf::Sprite* sprite, sf::Texture &text) {
 }
 
 // Functions
-
 void Board::drawBoard(RenderWindow &window) {
-    for (int i = 0; i < 16; i++) { // Might Change
-        for (int j = 0; j < 25; j++) { // Might Change
+    for (int i = 0; i < 16; i++) {
+        for (int j = 0; j < 25; j++) {
             Tile* tile = tiles[i][j];
             Sprite* sprite = tile->getSprite();
             Sprite* sprite2 = tile->getSprite2();
@@ -228,6 +228,7 @@ void Board::drawBoard(RenderWindow &window) {
             }
         }
     }
+    // update the images/png's
     updateScore();
     window.draw(faceSprite);
     window.draw(debugSprite);
@@ -239,9 +240,10 @@ void Board::drawBoard(RenderWindow &window) {
     window.draw(scoreSprite3);
 }
 
+// the numbers should be changing
 void Board::updateScore() {
     int flagged = 0;
-    for (int i = 0; i < 16; i++) { // Might change
+    for (int i = 0; i < 16; i++) {
         for (int j = 0; j < 25; j++) {
             Tile* current = tiles[i][j];
             if (current->getIsFlagged()) {
@@ -292,10 +294,10 @@ void Board::generateBombs() {
 void Board::setup() {
     isLost = false;
     isWon = false;
-    remainingTiles = 400; // Might change
+    remainingTiles = 400;
     setSprite(&faceSprite, happyFace);
-    for (int i = 0; i < 16; i++) { // Might change
-        for (int j = 0; j < 25; j++) { // Might change
+    for (int i = 0; i < 16; i++) {
+        for (int j = 0; j < 25; j++) {
             if (!tiles[i][j]) {
                 delete tiles[i][j];
             }
@@ -313,8 +315,8 @@ void Board::loadFromFile(string fileName) {
     fstream File(fileName, fstream::in);
     int i = 0;
     int j = 0;
-    bombs = 0; // Might change
-    remainingTiles = 400; // Might change
+    bombs = 0;
+    remainingTiles = 400;
 
     while (File >> x) {
         Tile* tile = tiles[i][j];
@@ -420,8 +422,8 @@ void Board::winGame() {
     isWon = true;
     isDebug = false;
     setSprite(&faceSprite, winFace);
-    for (int i = 0; i < 16; i++) { // Might change
-        for (int j = 0; j < 25; j++) { // Might change
+    for (int i = 0; i < 16; i++) {
+        for (int j = 0; j < 25; j++) {
             Tile* tile = tiles[i][j];
 
             if (tile->getIsDebug()) {
